@@ -6,20 +6,12 @@ import javax.swing.*;
 public class test {
     public static void main(String args[]) {
         JFrame win = new JFrame();
-
+        win.getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER));
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JButton north = new JButton("North");
-        JButton center = new JButton("Center");
-        JButton south = new JButton("South");
-        JButton west = new JButton("West");
-        JButton east = new JButton("East");
-
-        win.getContentPane().add(north, BorderLayout.NORTH);
-        win.getContentPane().add(center, BorderLayout.CENTER);
-        win.getContentPane().add(south, BorderLayout.SOUTH);
-        win.getContentPane().add(west, BorderLayout.WEST);
-        win.getContentPane().add(east, BorderLayout.EAST);
+        for (int i = 0; i<16; i++) {
+            win.getContentPane().add(new JButton("Button" + i));
+        }
 
         win.setPreferredSize(new Dimension(400, 300));
         win.setVisible(true);        
