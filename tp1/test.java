@@ -10,14 +10,17 @@ public class test {
         win.getContentPane().add(new JLabel("Hello World"), BorderLayout.CENTER);
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        win.setLocation(100,100);
-
+        //win.setLocation(100,100);
         win.setPreferredSize(new Dimension(400, 300));
-
         win.setVisible(true);        
         win.pack();
+
         win.setLocationRelativeTo(null);
-        win.setResizable(false);
+        
+        JDialog dialog = new JDialog(win, "Dialogue");
+        dialog.setSize(new Dimension(100, 100));
+        dialog.setModal(true);
+        dialog.setVisible(true);
 
     }
 }
