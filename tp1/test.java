@@ -9,6 +9,8 @@ public class test {
         JFrame win = new JFrame();
         win.getContentPane().setLayout(new BorderLayout());
         win.getContentPane().add(new JLabel("Hello World"), BorderLayout.CENTER);
+        win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         win.setLocation(100,100);
 
         win.setPreferredSize(new DimensionUIResource(400, 300));
