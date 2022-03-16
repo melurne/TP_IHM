@@ -6,7 +6,7 @@ import javax.swing.*;
 public class test {
     public static void main(String args[]) {
         JFrame win = new JFrame();
-        win.getContentPane().setLayout(new FlowLayout(FlowLayout.CENTER));
+        win.getContentPane().setLayout(new GridLayout(4, 4));
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         for (int i = 0; i<16; i++) {
