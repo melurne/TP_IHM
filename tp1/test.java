@@ -6,21 +6,27 @@ import javax.swing.*;
 public class test {
     public static void main(String args[]) {
         JFrame win = new JFrame();
-        win.getContentPane().setLayout(new BorderLayout());
-        win.getContentPane().add(new JLabel("Hello World"), BorderLayout.CENTER);
+
         win.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        //win.setLocation(100,100);
+        JButton north = new JButton("North");
+        JButton center = new JButton("Center");
+        JButton south = new JButton("South");
+        JButton west = new JButton("West");
+        JButton east = new JButton("East");
+
+        win.getContentPane().add(north, BorderLayout.NORTH);
+        win.getContentPane().add(center, BorderLayout.CENTER);
+        win.getContentPane().add(south, BorderLayout.SOUTH);
+        win.getContentPane().add(west, BorderLayout.WEST);
+        win.getContentPane().add(east, BorderLayout.EAST);
+
         win.setPreferredSize(new Dimension(400, 300));
         win.setVisible(true);        
         win.pack();
 
         win.setLocationRelativeTo(null);
-        
-        JDialog dialog = new JDialog(win, "Dialogue");
-        dialog.setSize(new Dimension(100, 100));
-        dialog.setModal(true);
-        dialog.setVisible(true);
+
 
     }
 }
