@@ -13,9 +13,9 @@ public class VboxLayout implements LayoutManager {
     // espace vertical entre chaque compant
     private int vgap;
     // largeur et hauteur minimales du conteneur
-    private int minWidth = 0, minHeight = 0;
+    private int minWidth = 400, minHeight = 300;
     // largeur et hauteur preferees du conteneur
-    private int preferredWidth = 0, preferredHeight = 0;
+    private int preferredWidth = 400, preferredHeight = 300;
 
     public VboxLayout() {
         this(2);
@@ -40,10 +40,10 @@ public class VboxLayout implements LayoutManager {
         int nComps = parent.getComponentCount();
 
         //Reset de preferred/minimum width and height.
-        preferredWidth = 0;
-        preferredHeight = 0;
-        minWidth = 0;
-        minHeight = 0;
+        preferredWidth = 400;
+        preferredHeight = 300;
+        minWidth = 400;
+        minHeight = 300;
 
   // Ecrire le code qui permet de calculer les dimensions minimales et
   // preferrees du conteneur en utilisant les dimensions des differents
@@ -54,7 +54,7 @@ public class VboxLayout implements LayoutManager {
 
     /* Required by LayoutManager. */
     public Dimension preferredLayoutSize(Container parent) {
-        Dimension dim = new Dimension(0, 0);
+        Dimension dim = new Dimension(preferredWidth, preferredHeight);
  
   // Retourne les dimensions preferees du conteneur en utilisant
   // preferredWidth et preferredHeight ainsi que les dimensions du bord
@@ -65,7 +65,7 @@ public class VboxLayout implements LayoutManager {
 
     /* Required by LayoutManager. */
     public Dimension minimumLayoutSize(Container parent) {
-        Dimension dim = new Dimension(0, 0);
+        Dimension dim = new Dimension(minWidth, minHeight);
   // Retourne les dimensions minimales du conteneur en utilisant
   // minWidth et minHeight ainsi que les dimensions du bord
   // du conteneur (Insets)
