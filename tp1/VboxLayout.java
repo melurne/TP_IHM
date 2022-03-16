@@ -39,6 +39,8 @@ public class VboxLayout implements LayoutManager {
   // nombre de composants du conteneur
         int nComps = parent.getComponentCount();
 
+        
+
         //Reset de preferred/minimum width and height.
         preferredWidth = 400;
         preferredHeight = 300;
